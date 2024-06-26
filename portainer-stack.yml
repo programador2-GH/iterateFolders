@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  accesvolumes:
+    image: registry.grupohereda.com/check-volume
+    volumes:
+      - /mnt/volumes:/mnt/volumes
+    environment:
+      - FOLDER_PATH=/mnt/volumes
+    restart: "no"
+    deploy:
+      placement:
+        constraints:
+          - node.hostname == maria001
+    
