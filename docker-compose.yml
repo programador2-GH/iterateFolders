@@ -1,0 +1,12 @@
+services:
+  accesvolumes:
+    container_name: checkvolume
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    volumes:
+      - C:/Users/Mykhaylo/Desktop/Development/1.Grupo-Hereda:/mnt/volumes
+    environment:
+      - FOLDER_PATH=/mnt/volumes
+
+    
